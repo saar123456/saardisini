@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Transaksi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 30px;
+            background-color:  hsl(177, 85%, 64%);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+            border: 1px solid #ddd;
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        label {
+            font-weight: bold;
+            color: #444;
+        }
+        input, textarea, select {
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        input:focus, textarea:focus, select:focus {
+            border-color: #b3f026;
+            box-shadow: 0 0 5px rgba(38, 193, 240, 0.3);
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        button {
+            background-color: #caeb13;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button:hover {
+            background-color: #727a28;
+        }
+        /* Styling for the image */
+        .header-image {
+            width: 120px; /* Adjust size to fit the layout */
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 20px auto;
+        }
+        @media (max-width: 768px) {
+            .container {
+                margin: 15px;
+                padding: 20px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            input, textarea, select, button {
+                font-size: 14px;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <!-- Add an image inside the container, above the form -->
+        <img src="2.jpg" alt="Header Image" class="header-image">
+
+        <h2>Tambahkan Transaksi Kamu</h2>
+        <form action="#" method="post">
+            <label for="transaction-name">Nama Transaksi</label>
+            <input type="text" id="transaction-name" name="transaction-name" placeholder="Masukkan nama transaksi" required>
+
+            <label for="transaction-amount">Jumlah</label>
+            <input type="number" id="transaction-amount" name="transaction-amount" placeholder="Masukkan jumlah transaksi" required>
+
+            <label for="transaction-category">Kategori</label>
+            <select id="transaction-category" name="transaction-category" required>
+                <option value="">Pilih Kategori</option>
+                <option value="pendapatan">Pendapatan</option>
+                <option value="pengeluaran">Pengeluaran</option>
+            </select>
+
+            <label for="transaction-date">Tanggal Transaksi</label>
+            <input type="date" id="transaction-date" name="transaction-date" required>
+
+            <label for="transaction-description">Deskripsi</label>
+            <textarea id="transaction-description" name="transaction-description" rows="4" placeholder="Tambahkan deskripsi transaksi"></textarea>
+
+            <div class="button-container">
+                <button type="submit">Tambah Transaksi</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
